@@ -108,6 +108,10 @@ const articleCreator = (data)=>{
   const thirdPara = document.createElement('p')
   const expandBttn = document.createElement('span')
 
+  article.classList.add('article')
+  date.classList.add('date')
+  expandButton.classList.add('expandButton')
+
 //   Hint: You will need to use createElement more than once here!
 
 //   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
