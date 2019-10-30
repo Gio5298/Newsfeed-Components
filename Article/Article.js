@@ -110,7 +110,7 @@ const articleCreator = (data)=>{
 
   article.classList.add('article')
   date.classList.add('date')
-  expandButton.classList.add('expandButton')
+  expandBttn.classList.add('expandButton')
 
   title.textContent = data.title
   date.textContent = data.data
@@ -118,6 +118,19 @@ const articleCreator = (data)=>{
   firstPara.textContent = data.firstPara;
   secondPara.textContent = data.secondPara;
   thirdPara.textContent = data.thirdPara;
+
+  expandBttn.addEventListener('click', (e)=>{
+    article.classList.toggle('article-open')
+  })
+
+  article.appendChild(title)
+  article.appendChild(date)
+  article.appendChild(firstPara)
+  article.appendChild(secondPara)
+  article.appendChild(thirdPara)
+  article.appendChild(expandBttn)
+
+  return article
 
 //   Hint: You will need to use createElement more than once here!
 
