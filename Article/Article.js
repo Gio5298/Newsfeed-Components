@@ -115,7 +115,7 @@ const articleCreator = (data)=>{
   closeButton.classList.add('closeButton')
 
   title.textContent = data.title
-  date.textContent = data.data
+  date.textContent = data.date
 
   firstParagraph.textContent = data.firstParagraph;
   secondParagraph.textContent = data.secondParagraph;
