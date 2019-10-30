@@ -103,34 +103,44 @@ const articleCreator = (data)=>{
   const article = document.createElement('div')
   const title = document.createElement('h2')
   const date = document.createElement('p')
-  const firstPara = document.createElement('p')
-  const secondPara = document.createElement('p')
-  const thirdPara = document.createElement('p')
-  const expandBttn = document.createElement('span')
+  const firstParagraph = document.createElement('p')
+  const secondParagraph = document.createElement('p')
+  const thirdParagraph = document.createElement('p')
+  const expandButton = document.createElement('span')
+  const closeButton = document.createElement('span')
 
   article.classList.add('article')
   date.classList.add('date')
-  expandBttn.classList.add('expandButton')
+  expandButton.classList.add('expandButton')
+  closeButton.classList.add('closeButton')
 
   title.textContent = data.title
   date.textContent = data.data
 
-  firstPara.textContent = data.firstPara;
-  secondPara.textContent = data.secondPara;
-  thirdPara.textContent = data.thirdPara;
+  firstParagraph.textContent = data.firstParagraph;
+  secondParagraph.textContent = data.secondParagraph;
+  thirdParagraph.textContent = data.thirdParagraph;
+  expandButton.textContent = '\u25bc';
 
-  expandBttn.addEventListener('click', (e)=>{
+  expandButton.addEventListener('click', (e)=>{
     article.classList.toggle('article-open')
   })
 
   article.appendChild(title)
   article.appendChild(date)
-  article.appendChild(firstPara)
-  article.appendChild(secondPara)
-  article.appendChild(thirdPara)
-  article.appendChild(expandBttn)
+  article.appendChild(firstParagraph)
+  article.appendChild(secondParagraph)
+  article.appendChild(thirdParagraph)
+  article.appendChild(expandButton)
 
   return article
+}
+
+  const articles = document.querySelector('.articles')
+
+data.map(element=>{
+  articles.appendChild(articleCreator(element))
+})
 
 //   Hint: You will need to use createElement more than once here!
 
