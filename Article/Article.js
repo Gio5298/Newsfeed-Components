@@ -112,6 +112,13 @@ const articleCreator = (data)=>{
   date.classList.add('date')
   expandButton.classList.add('expandButton')
 
+  title.textContent = data.title
+  date.textContent = data.data
+
+  firstPara.textContent = data.firstPara;
+  secondPara.textContent = data.secondPara;
+  thirdPara.textContent = data.thirdPara;
+
 //   Hint: You will need to use createElement more than once here!
 
 //   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
